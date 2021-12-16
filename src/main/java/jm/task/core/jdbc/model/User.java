@@ -20,7 +20,7 @@ public class User {
 
     @Override
     public String toString() {
-        return String.format("Пользователь id = %d [Имя:%s, Фамилия: %s, Возраст: %d]", id, name, lastName, age);
+        return String.format("Пользователь id = %d [Имя:%1s, Фамилия: %2s, Возраст: %d]", id, name, lastName, age);
     }
 
     public User() {
