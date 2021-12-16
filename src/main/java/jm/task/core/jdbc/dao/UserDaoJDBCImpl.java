@@ -19,10 +19,10 @@ public class UserDaoJDBCImpl implements UserDao {
     public void createUsersTable() {
         try (Statement statement = connection.createStatement()) {
             statement.execute("CREATE TABLE IF NOT EXISTS `usershema`.`USER` (\n" +
-                    "   `id` INT NOT NULL AUTO_INCREMENT,\n" +
+                    "   `id` BIGINT(20) NOT NULL AUTO_INCREMENT,\n" +
                     "   `name` VARCHAR(45) NOT NULL,\n" +
                     "   `lastname` VARCHAR(45) NOT NULL,\n" +
-                    "   `age` INT NULL,\n" +
+                    "   `age` TINYINT(3) NULL,\n" +
                     "   PRIMARY KEY (`id`))\n" +
                     "   ENGINE = InnoDB\n" +
                     "   DEFAULT CHARACTER SET = ascii;");
